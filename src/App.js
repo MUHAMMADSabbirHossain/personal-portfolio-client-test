@@ -1,5 +1,8 @@
 // import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Components/Home/Home';
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -18,6 +21,11 @@ function App() {
           Learn React
         </a>
       </header> */}
+
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
+      </Routes>
     </div>
   );
 }
